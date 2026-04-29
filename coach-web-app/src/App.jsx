@@ -1280,10 +1280,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-slate-100 max-w-md mx-auto relative overflow-x-hidden antialiased" style={{ ...appBg, fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
+    <div className="app-shell min-h-screen text-slate-100 max-w-md mx-auto relative overflow-x-hidden antialiased" style={{ ...appBg, fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');`}</style>
       {/* Header global */}
-      <div className="bg-[#0B0F19]/82 backdrop-blur-xl border-b border-blue-400/10 sticky top-0 z-30">
+      <div className="app-topbar bg-[#0B0F19]/82 backdrop-blur-xl border-b border-blue-400/10 sticky z-30">
         <div className="px-4 py-4 flex items-center justify-between max-w-md mx-auto">
           <div>
             <h1 className="text-[17px] font-bold text-[#E5E7EB] tracking-[0.04em] leading-tight">COACH MODE</h1>
@@ -1316,7 +1316,7 @@ export default function App() {
       )}
 
       {/* Bottom nav */}
-      <div className="fixed bottom-4 left-4 right-4 max-w-sm mx-auto bg-[#111827]/88 backdrop-blur-xl border border-blue-400/18 rounded-[28px] flex z-40 px-2 py-1.5 shadow-[0_18px_50px_rgba(0,0,0,0.50),0_0_28px_rgba(37,99,235,0.12),inset_0_1px_0_rgba(255,255,255,0.04)]">
+      <div className="bottom-nav-safe fixed left-4 right-4 max-w-sm mx-auto bg-[#111827]/88 backdrop-blur-xl border border-blue-400/18 rounded-[28px] flex z-40 px-2 py-1.5 shadow-[0_18px_50px_rgba(0,0,0,0.50),0_0_28px_rgba(37,99,235,0.12),inset_0_1px_0_rgba(255,255,255,0.04)]">
         <button onClick={() => setVista('hoy')}
           className={`relative flex-1 flex flex-col items-center py-2 transition ${vista === 'hoy' ? 'text-[#60A5FA]' : 'text-[#64748B] hover:text-[#94A3B8]'}`}>
           <Home size={20} />
